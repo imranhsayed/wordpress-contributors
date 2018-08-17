@@ -1,0 +1,42 @@
+/**
+ * Meta box filter css for dashboard.
+ *
+*/
+.wpco-autocomplete-loading {
+	background: white url("../assets/img/ui-anim_basic_16x16.gif") right center no-repeat;
+}
+
+.wpco-ui-widget {
+	margin-bottom: 1em;
+}
+
+.wpco-suggestions-container {
+	border: 1px solid #cccccc;
+	padding: 5px 0 5px 14px;
+}
+
+.wpco-search-input {
+	width: 100%;
+	padding: 12px 20px 12px 12px;
+}
+
+.wpco-suggestion-item {
+	cursor: pointer;
+}
+
+.wpco-selected-username {
+	display: inline-block;
+	border: 1px solid #ada6a6;
+	margin-right: 10px;
+	padding: 8px 10px 8px 10px;
+}
+
+.wpco-selected-name {
+	margin-right: 5px;
+}
+
+.wpco-remove-contributor-icon {
+	font-size: 16px;
+	margin: 2px -5px -4px -5px;;
+	cursor: pointer;
+}
