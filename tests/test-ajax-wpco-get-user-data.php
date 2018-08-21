@@ -27,9 +27,8 @@ class Test_Ajax_WPCO_Get_User_Data extends WP_Ajax_UnitTestCase {
     }
 
     /**
-     * Testing successful ajax_insert_auto_draft_post
+     * Testing successful ajax_wpco_get_users_data
      *
-     * @see WP_Customize_Posts::ajax_insert_auto_draft_post()
      */
     function test_ajax_wpco_get_users_data() {
         // Create a user with nicename 'Amy' , using WP_UnitTestCase factory.
