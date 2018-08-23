@@ -16,7 +16,7 @@
 
 // Define Constants.
 define( 'WPCO_URI', plugins_url( 'wordpress-contributors' ) );
-define( 'WPCO_TEMPLATES_URI', plugins_url( 'wordpress-contributors' ) . '/templates/' );
+define( 'WPCO_TEMPLATE_PATH', plugin_dir_path( __FILE__ ) . 'templates/' );
 define( 'WPCO_JS_URI', plugins_url( 'wordpress-contributors' ) . '/js/' );
 define( 'WPCO_CSS_URI', plugins_url( 'wordpress-contributors' ) . '/css/' );
 
@@ -24,4 +24,5 @@ define( 'WPCO_CSS_URI', plugins_url( 'wordpress-contributors' ) . '/css/' );
 include_once 'includes/class-wpco-enqueue-scripts.php';
 include_once 'includes/class-wpco-get-user-data.php';
 include_once 'includes/class-wpco_add_meta_box.php';
+include_once 'includes/class-wpco-settings.php';
 include_once 'includes/class-wpco_filter_post_content.php';
