@@ -15,7 +15,7 @@ class WPCO_Settings {
 	 */
 	public function wpco_create_menu() {
 
-		$menu_plugin_title = __( 'WPCO Settings', 'orion-sms-orion-sms-otp-verification' );
+		$menu_plugin_title = __( 'WPCO Settings', 'wordpress-contributors' );
 
 		// Create new top-level menu.
 		add_menu_page( __(
