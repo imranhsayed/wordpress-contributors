@@ -27,16 +27,20 @@ class WPCO_Add_Meta_Box_Test extends WP_UnitTestCase {
 	 */
 	function test_wpco_add_custom_box() {
 		global $wp_meta_boxes;
+		$option_value = array( 'post', 'book' );
+
+		// Create option key 'wpco_post_types' with the $option_value as its value.
+		add_option( 'wpco_post_types', $option_value );
 
 		$add_meta_box = new WPCO_Add_Meta_Box();
 		$add_meta_box->wpco_add_custom_box();
 
-		// Check if the two meta boxes are added on the add new post and edit post screens.
+		// Check if the two meta boxes are added on default 'post' and custom post type 'book' screens.
 		$add_post_screen_id = $wp_meta_boxes['post']['advanced']['default']['wpco_box_id']['id'];
-		$edit_post_screen_id = $wp_meta_boxes['wporg_cpt']['advanced']['default']['wpco_box_id']['id'];
-		$meta_boxes_added = ( 'wpco_box_id' === $add_post_screen_id && 'wpco_box_id' === $edit_post_screen_id ) ? 'added' : 'not added';
+		$edit_post_screen_id = $wp_meta_boxes['book']['advanced']['default']['wpco_box_id']['id'];
+		$meta_boxes_added = ( 'wpco_box_id' === $add_post_screen_id && 'wpco_box_id' === $edit_post_screen_id );
 
-		$this->assertTrue( 'added' === $meta_boxes_added );
+		$this->assertTrue( $meta_boxes_added );
 	}
 
 	/**
