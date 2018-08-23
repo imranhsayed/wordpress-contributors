@@ -18,4 +18,3 @@ $wpdb->delete ( $table, array( 'meta_key' => 'wpco_post_contributor_ids') );
 
 // Delete options 'wpco_post_types'
 delete_option( 'wpco_post_types' );
-
