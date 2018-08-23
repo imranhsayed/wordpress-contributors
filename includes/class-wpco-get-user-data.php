@@ -25,15 +25,24 @@ class WPCO_Get_User_Data {
 		}
 
 		$query       = sanitize_text_field( wp_unslash( $_POST['query'] ) );
+		$string_length = 2;
+		$logged_in_user_id = get_current_user_id();
+		$user_id_array_to_be_excluded = ( $logged_in_user_id ) ? array( $logged_in_user_id ) : array();
 		$users_found = array();
 
-		if ( ! empty( $query ) && 2 < strlen( $query ) ) {
+		if ( ! empty( $query ) && $string_length < strlen( $query ) ) {
+			/**
+			 * Perform query to get users by their name or email.
+			 * Exclude the currently logged in user from the search.
+			 */
 			$users = new WP_User_Query(
 				array(
 					'search'         => '*' . esc_attr( $query ) . '*',
 					'search_columns' => array(
 						'user_nicename',
+						'user_email',
 					),
+					'exclude' => $user_id_array_to_be_excluded,
 				)
 			);
 
