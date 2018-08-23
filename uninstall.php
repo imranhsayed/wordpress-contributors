@@ -7,7 +7,7 @@
  */
 
 // If uninstall.php is not called by WordPress, die.
-if (!defined('WP_UNINSTALL_PLUGIN')) {
+if ( !defined('WP_UNINSTALL_PLUGIN' ) ) {
 	die;
 }
 
@@ -15,3 +15,6 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
 global $wpdb;
 $table = $wpdb->prefix.'postmeta';
 $wpdb->delete ( $table, array( 'meta_key' => 'wpco_post_contributor_ids') );
+
+// Delete options 'wpco_post_types'
+delete_option( 'wpco_post_types' );

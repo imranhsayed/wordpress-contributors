@@ -18,14 +18,16 @@ class WPCO_Add_Meta_Box {
 	 * Add meta box to the post editor screen.
 	 */
 	public function wpco_add_custom_box() {
-		$screens = array( 'post', 'wporg_cpt' );
-		foreach ( $screens as $screen ) {
-			add_meta_box(
-				'wpco_box_id',
-				__( 'Contributer(s)' ),
-				array( $this, 'wpco_custom_box_html' ),
-				$screen
-			);
+		$screens = get_option( 'wpco_post_types' );
+		if ( is_array( $screens ) && ! empty( $screens ) ) {
+			foreach ( $screens as $screen ) {
+				add_meta_box(
+					'wpco_box_id',
+					__( 'Contributer(s)' ),
+					array( $this, 'wpco_custom_box_html' ),
+					$screen
+				);
+			}
 		}
 	}
 

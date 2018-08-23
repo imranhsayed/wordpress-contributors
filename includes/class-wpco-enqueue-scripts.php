@@ -36,6 +36,12 @@ class WPCO_Enqueue_Scripts {
 				)
 			);
 		}
+
+		// Add style on WPCO Settings page.
+		if ( 'toplevel_page_wordpress-contributors/includes/class-wpco-settings' === $hook ) {
+			wp_register_style( 'wpco_plugin_settings_css', WPCO_CSS_URI . 'plugin-settings.css', '', '', false );
+			wp_enqueue_style( 'wpco_plugin_settings_css' );
+		}
 	}
 
 	/**
