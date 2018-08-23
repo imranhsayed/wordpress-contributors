@@ -29,7 +29,7 @@
 					?>
 					<div class="wpco-form-group">
 						<label for="wpco-<?php echo $post_type; ?>" class="wpco-label">
-							<input class="wpco-form-control" id="wpco-<?php echo $post_type; ?>" type="checkbox" name="wpco_post_types[]" value="<?php echo $post_type; ?>" <?php echo $checked; ?>>
+							<input class="wpco-form-control" id="wpco-<?php echo $post_type; ?>" type="checkbox" name="wpco_post_types[]" value="<?php echo esc_attr( $post_type ); ?>" <?php echo $checked; ?>>
 							<?php echo ucfirst( $post_type ); ?>
 						</label>
 					</div>
