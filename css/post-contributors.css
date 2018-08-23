@@ -65,6 +65,9 @@
 }
 
 .wpco_avatar-username {
-	margin-top: 20px;
 	display: block;
+}
+
+.wpco_avatar_container img {
+	margin-bottom: 20px;
 }

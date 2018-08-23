@@ -23,7 +23,7 @@ class WPCO_Filter_Post_Content {
 	 * @return string $new_content Content with Contributors list.
 	 */
 	public function wpco_display_contributors( $content ) {
-		if ( ! is_single() ) {
+		if ( ! is_single() && ! is_author() && ! is_category() && ! is_tag() ) {
 			return;
 		}
 
@@ -41,7 +41,7 @@ class WPCO_Filter_Post_Content {
 				$user_data  = get_userdata( $id );
 				$user_name  = $user_data->user_nicename;
 				$author_url = get_author_posts_url( $id );
-				$avatar_img = get_avatar( $id, 50 );
+				$avatar_img = ( ! is_category() && ! is_tag() ) ? get_avatar( $id, 50 ) : '';
 
 				$contributors_content .=
 					'<div class="wpco_avatar_container">' .
