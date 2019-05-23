@@ -1,5 +1,9 @@
-# wordpress-contributors
+# WordPress Contributors Plugin
 This plugin allows you to add more than one author for the post in the Add New and Edit Post section of WordPress dashboard. The plugin would display a section called 'Contributors' below each post in the front end of your site, which will contain the list of authors for that post selected from WordPress dashboard. Noe that the initial author of the post will always be selected.
+
+# Plugin Demo :video_camera:
+
+![](contributors.gif)
 
 ## Getting Started
 
@@ -35,4 +39,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Inspiration: A rtCamp Plugin Challenge
+* Inspiration: A [rtCamp](https://rtcamp.com) Plugin Challenge
